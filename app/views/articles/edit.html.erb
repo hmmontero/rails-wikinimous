@@ -1,0 +1,5 @@
+<%= form_with model: @article, local: true do |form| %>
+<%= form.label :title, "Título" %> <%= form.text_field :title, placeholder: "", class: "title-input" %>
+<%= form.label :content, "Contenido" %> <%= form.text_area :content, rows: 10, class: "content-textarea" %>
+<%= form.submit "Crear Artículo", class: "submit-btn" %> <%= link_to "Volver", articles_path, class: "back-link" %>
+<% end %>

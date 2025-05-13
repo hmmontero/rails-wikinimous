@@ -1,0 +1,12 @@
+<div class="container-show">
+  <h1>
+  <%= "#{@article.title}" %>
+  <%= link_to edit_article_path(@article) do %>
+    <i class="fa fa-pencil"></i>
+  <% end %>
+  <%= link_to article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Seguro?" } do %>
+    <i class="fa fa-trash"></i>
+  <% end %>
+  </h1>
+  <h2><%= "#{@article.content}" %></h2>
+</div>
